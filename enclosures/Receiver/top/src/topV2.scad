@@ -4,15 +4,15 @@ $fn = 50;
 difference() {
     union() {
         mainBox(0, 0, 0);
-        // kreplenie dlia knopki
-        rotate([0, 3, 0]) {
-            box(2.29, 32.1, 5.02 - 2.29);
-        }
+        // button holder
+        //rotate([0, 3, 0]) {
+            //box(2.29, 32.1, 5.02 - 2.29);
+        //}
     }
-    // mesto dlia knopki
-    rotate([0, 3, 0]) {
-        cut(2.29, 32.1 + 2, 5.02 - 2.29);
-    }
+    // button space
+    //rotate([0, 3, 0]) {
+        //cut(2.29, 32.1 + 2, 5.02 - 2.29);
+    //}
     // esp antenna hole
     translate([49.7 + 5.5, 76.2 - 3 , 9 - 0.47 + 3 - 1.12 - 1]) {
         rotate([0, 87, 90]) {
@@ -90,7 +90,7 @@ module innerCilinder(xdim, ydim, hdim) {
     batteryH = 11;
     // remove batteryH in case of external power supply
     // cilH = 14.98 + batteryH;
-    cilH = 14.98;
+    cilH = 14.98 - 5; // make battery thinner
     translate([xdim, ydim, 0]) {
         difference() {
             cylinder(h = cilH, r = radius);
@@ -114,8 +114,8 @@ module mainBox(xdim, ydim, zdim) {
    owidth = 76.2;
    olength = 76.2;
    // if battery won't be used remove batteryH
-   // oheight = 16.92 + batteryH;
-    oheight = 16.92;
+   // oheight = 16.92 + batteryH; in case if battery on top
+    oheight = 16.92 - 5; // - 5 make top thinner 
    // inner
    iwidth = owidth - (borderH * 2);
    ilength = olength - (borderH * 2);
