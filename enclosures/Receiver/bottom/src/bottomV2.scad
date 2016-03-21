@@ -1,4 +1,4 @@
-$fn = 100;
+$fn = 50;
 // var
 // Cap width
 capW = 37;
@@ -196,14 +196,14 @@ module mainBox(xdip, ydip, zdip) {
              battConnector(movecony4, moveconx4, moveconz4);
          }
          // wiring space
-         translate([(owidth/2) - (boxW / 2) ,  owidth - 4.35 +1.5 - 2 ,hdip + boxH - 2]) {
+         translate([(owidth/2) - (boxW / 2) ,  owidth - 4.35 + 1.5 - 2 ,hdip + boxH - 2]) {
              cube([boxW, 2, 2+1]);
          }
-         translate([(owidth/2) - (boxW / 2) ,  owidth - 4.35 +0.5 - 2 ,(hdip + boxH) / 2]) {
+         translate([(owidth/2) - (boxW / 2) ,  owidth - 4.35 + 1.5 - 2 ,(hdip + boxH) / 2]) {
              cube([boxW, 2, 2+1]);
          }
          // wiring space
-         translate([(owidth/2) - (boxW / 2) , 4.35 +1.5 - 2 ,hdip + boxH - 2]) {
+         translate([(owidth/2) - (boxW / 2) , 4.35 - 1.5 ,hdip + boxH - 2]) {
              cube([boxW, 2, 2+1]);
          }
          translate([(owidth/2) - (boxW / 2) , 4.35 +0.5 - 2 ,(hdip + boxH) / 2]) {
